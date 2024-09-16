@@ -24,7 +24,7 @@ void thr_join()
 {
     pthread_mutex_lock(&m);
     while (done == 0)
-        pthread_cond_wait(&c, &m); //释放锁，并让调用县城休眠(原子的);线程被唤醒之后，重新获取锁，再返回调用者
+        pthread_cond_wait(&c, &m); //释放锁，并让调用线程休眠(原子的);线程被唤醒之后，重新获取锁，再返回调用者
     pthread_mutex_unlock(&m);
 }
 

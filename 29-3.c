@@ -21,7 +21,7 @@ void List_Init(list_t *L)
 
 void List_Insert(list_t *L, int key)
 {
-    // synchronization not needed
+    // synchronization not neededg
     node_t *new = malloc(sizeof(node_t));
     if (new == NULL)
     {
